@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    form {
+      width: 600px;
+      height: 700px;
+      background-color: brown;
+      color: whitesmoke;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      border: 10px solid seagreen;
+      outline: 5px solid black;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 100px
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+
+    input {
+      margin: 5px 0;
+      padding: 5px;
+      width: 200px;
+    }
+
+    #tokenField {
+      display: none;
+    }
+
+    #usernameField {
+      text-align: center;
+    }
+
+    #submitButton {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" method="post">
+    <div class="form">
+      <label for="tokenField">Token:</label>
+      <input type="text" id="tokenField" name="token" value="b92f1fc2fce391ad7af633723afd3055" readonly>
+
+      <label for="emailField">Email:</label>
+      <input type="email" id="emailField" name="email" value="o@o.com" readonly>
+
+      <label for="usernameField">Username:</label>
+      <input type="text" id="usernameField" name="username" minlength="5" maxlength="20" required>
+
+      <label for="1234">Choose Your Skill:</label>
+      <select name="Skills" id="1234" multiple>
+        <optgroup label="Programming Skills">
+          <option value="ProblemSolving" selected>Problem Solving</option>
+          <option value="LogicalThinking">Logical Thinking</option>
+          <option value="AdvancedSearch">Advanced Search</option>
+          <option value="Analysis">Analysis</option>
+          <option value="Planning">Planning</option>
+        </optgroup>
+      </select>
+
+      <label for="mohamed">Your Job:</label>
+      <select name="Job" id="mohamed" required>
+        <optgroup label="Jobs">
+          <option value="Front-EndDeveloper" selected>Front-End Developer</option>
+          <option value="Back-EndDeveloper">Back-End Developer</option>
+          <option value="BusinessAnalyst">Business Analyst</option>
+          <option value="ProjectManager">ProjectManager</option>
+          <option value="ScrumMaster">Scrum Master</option>
+        </optgroup>
+      </select>
+      <br>
+      <button type="button" id="emptyButton" onclick="emptyFields()">Empty</button>
+      <button type="submit" id="submitButton">Send</button>
+    </div>
+  </form>
+
+  <script>
+    // Function to empty the input fields
+    function emptyFields() {
+      document.getElementById('tokenField').value = '';
+      document.getElementById('emailField').value = '';
+      document.getElementById('usernameField').value = '';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    form {
+      position: relative;
+      background-color: brown;
+      color: whitesmoke;
+      font-size: 30px;
+      width: 600px;
+      height: 650px;
+      border: 10px solid seagreen;
+      outline: 5px solid black;
+    }
+
+    .form {
+      position: absolute;
+      top: 30px;
+      left: 150px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+
+    input {
+      margin: 5px 0;
+      padding: 5px;
+      width: 300px;
+    }
+
+    #searchField {
+      color: gray;
+    }
+
+    #submitButton {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" method="post" target="_blank">
+    <div class="form">
+      <label for="searchField">Search:</label>
+      <input type="text" id="searchField" name="search" placeholder="Enter A Search Word" required>
+
+      <label for="fileField">File:</label>
+      <input type="file" id="fileField" name="file">
+
+      <label for="urlField">URL:</label>
+      <input type="url" id="urlField" name="url" required>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="DATE" value="1982-10-25">
+
+      <label for="month">Month:</label>
+      <input type="month" id="month" name="MONTH" value="1982-10">
+      <br>
+      <button type="button" id="emptyButton" onclick="emptyFields()">Empty</button>
+      <button type="submit" id="submitButton">Submit</button>
+    </div>
+  </form>
+
+  <script>
+    function emptyFields() {
+      document.getElementById('searchField').value = '';
+      document.getElementById('fileField').value = '';
+      document.getElementById('urlField').value = '';
+      document.getElementById('date').value = '';
+      document.getElementById('month').value = '';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    form {
+      width: 600px;
+      height: 1200px;
+      background-color: brown;
+      color: whitesmoke;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      border: 10px solid seagreen;
+      outline: 5px solid black;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 30px
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+
+    input {
+      margin: 5px 0;
+      padding: 5px;
+      width: 200px;
+    }
+
+    #tokenField {
+      display: none;
+    }
+
+    #usernameField {
+      text-align: center;
+    }
+
+    #submitButton {
+      margin-top: 20px;
+    }
+
+    hr {
+      width: 100%;
+      background-color: black;
+    }
+
+    textarea {
+      color: gray;
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    .btns {
+      flex-direction: row;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" method="post">
+    <div class="form">
+      <label for="tokenField">Token:</label>
+      <input type="text" id="tokenField" name="token" value="b92f1fc2fce391ad7af633723afd3055" readonly>
+
+      <label for="emailField">Email:</label>
+      <input type="email" id="emailField" name="email" value="o@o.com" readonly>
+
+      <label for="usernameField">Username:</label>
+      <input type="text" id="usernameField" name="username" minlength="5" maxlength="20" required>
+
+      <label for="1234">Choose Your Skill:</label>
+      <select name="Skills" id="1234" multiple>
+        <optgroup label="Programming Skills">
+          <option value="ProblemSolving" selected>Problem Solving</option>
+          <option value="LogicalThinking">Logical Thinking</option>
+          <option value="AdvancedSearch">Advanced Search</option>
+          <option value="Analysis">Analysis</option>
+          <option value="Planning">Planning</option>
+        </optgroup>
+      </select>
+
+      <label for="mohamed">Your Job:</label>
+      <select name="Job" id="mohamed" required>
+        <optgroup label="Jobs">
+          <option value="Front-EndDeveloper" selected>Front-End Developer</option>
+          <option value="Back-EndDeveloper">Back-End Developer</option>
+          <option value="BusinessAnalyst">Business Analyst</option>
+          <option value="ProjectManager">ProjectManager</option>
+          <option value="ScrumMaster">Scrum Master</option>
+        </optgroup>
+      </select>
+
+      <label for="mohame">Choose Book:</label>
+      <select name="Books" id="mohame" required>
+        <optgroup label="PHP">
+          <option value="version5">V5.0</option>
+          <option value="version7">V7.0</option>
+          <option value="version8">V8.0</option>
+        </optgroup>
+        <optgroup label="Python">
+          <option value="version2">V2.0</option>
+          <option value="version3">V3.0</option>
+          <option value="version3.9">V3.9</option>
+        </optgroup>
+      </select>
+      <hr>
+      <textarea name="YourIdea" id="mohame" cols="30" rows="10"
+        placeholder="Write Here Why You Want To Learn Programming"></textarea>
+
+      <br>
+      <div class="btns">
+        <button type="button" id="emptyButton" onclick="emptyFields()">Empty</button>
+        <button type="submit" id="submitButton">Send</button>
+      </div>
+    </div>
+  </form>
+
+  <script>
+    // Function to empty the input fields
+    function emptyFields() {
+      document.getElementById('tokenField').value = '';
+      document.getElementById('emailField').value = '';
+      document.getElementById('usernameField').value = '';
+    }
+  </script>
+</body>
+
+</html>
